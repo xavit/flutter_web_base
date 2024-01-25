@@ -7,7 +7,7 @@ import 'package:flutter_web_base/ui/views/view404.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    print('Route: ${settings.name}');
+    // print('Route: ${settings.name}');
     switch (settings.name) {
       case 'stateful':
         return _fadeRoute(const CounterView(), 'stateful');
