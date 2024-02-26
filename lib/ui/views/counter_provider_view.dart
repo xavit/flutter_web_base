@@ -22,13 +22,14 @@ class _CounterProviderPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final counterProvider = Provider.of<CounterProvider>(context);
+    final size = MediaQuery.of(context).size;
 
     return SizedBox(
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
           const Text("Contador PROVIDER", style: TextStyle(fontSize: 30)),
           const FittedBox(
             fit: BoxFit.contain,
@@ -44,22 +45,24 @@ class _CounterProviderPageBody extends StatelessWidget {
           Text('${counterProvider.counter}',
               style: const TextStyle(fontSize: 60)),
           const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              CustomElevatedButton(
-                text: '+ Incrementar',
-                onPressed: () => counterProvider.increment(),
-                color: Colors.blueGrey,
-              ),
-              const SizedBox(width: 10),
-              CustomElevatedButton(
-                text: '- Decrementar',
-                onPressed: () => counterProvider.decrement(),
-                color: Colors.brown,
-              ),
-            ],
+          SizedBox(
+            width: size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CustomElevatedButton(
+                  text: '+ Incrementar',
+                  onPressed: () => counterProvider.increment(),
+                  color: Colors.blueGrey,
+                ),
+                const SizedBox(width: 10),
+                CustomElevatedButton(
+                  text: '- Decrementar',
+                  onPressed: () => counterProvider.decrement(),
+                  color: Colors.brown,
+                ),
+              ],
+            ),
           ),
           const Spacer(),
         ],

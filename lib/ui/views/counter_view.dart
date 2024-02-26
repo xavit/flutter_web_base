@@ -20,7 +20,7 @@ class _CounterViewState extends State<CounterView> {
         children: [
           const Text(
             "Contador Stateful",
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 10),
           ),
           const FittedBox(
             fit: BoxFit.contain,
