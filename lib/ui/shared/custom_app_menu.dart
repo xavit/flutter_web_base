@@ -21,9 +21,7 @@ class CustomAppMenu extends StatelessWidget {
 }
 
 class _TabletDesktopMenu extends StatelessWidget {
-  const _TabletDesktopMenu({
-    super.key,
-  });
+  const _TabletDesktopMenu();
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +63,7 @@ class _TabletDesktopMenu extends StatelessWidget {
 }
 
 class _MobileMenu extends StatelessWidget {
-  const _MobileMenu({
-    super.key,
-  });
+  const _MobileMenu();
 
   @override
   Widget build(BuildContext context) {
