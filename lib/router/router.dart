@@ -9,6 +9,7 @@ class Flurorouter {
     router.define(
       "/",
       handler: _counterHandler,
+      // transitionDuration: const Duration(milliseconds: 500),
       transitionType: TransitionType.fadeIn,
     );
     router.define(
