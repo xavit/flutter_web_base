@@ -10,7 +10,11 @@ class RouteGenerator {
     // print('Route: ${settings.name}');
     switch (settings.name) {
       case 'stateful':
-        return _fadeRoute(const CounterView(), 'stateful');
+        return _fadeRoute(
+            const CounterView(
+              base: "7",
+            ),
+            'stateful');
 
       case 'provider':
         return _fadeRoute(const CounterProviderView(), 'provider');

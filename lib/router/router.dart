@@ -8,7 +8,10 @@ class Flurorouter {
 
   // Handlers
   static final Handler _counterHandler = Handler(
-    handlerFunc: (contex, params) => const CounterView(),
+    handlerFunc: (contex, params) {
+      print(params);
+      return CounterView(base: params['base']?[0] ?? '5');
+    },
   );
 
   static final Handler _counterProviderHandler = Handler(
@@ -29,6 +32,11 @@ class Flurorouter {
     );
     router.define(
       "/stateful",
+      handler: _counterHandler,
+      transitionType: TransitionType.fadeIn,
+    );
+    router.define(
+      "/stateful/:base",
       handler: _counterHandler,
       transitionType: TransitionType.fadeIn,
     );

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_base/ui/shared/custom_elevated_buttom.dart';
 
 class CounterView extends StatefulWidget {
-  const CounterView({super.key});
+  final String base;
+  const CounterView({super.key, required this.base});
 
   @override
   State<CounterView> createState() => _CounterViewState();
@@ -10,6 +11,14 @@ class CounterView extends StatefulWidget {
 
 class _CounterViewState extends State<CounterView> {
   int counter = 10;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    counter = int.parse(widget.base);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
