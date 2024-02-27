@@ -30,7 +30,7 @@ class _CounterProviderPageBody extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text("Contador PROVIDER", style: TextStyle(fontSize: 30)),
+          const Text("Contador PROVIDER", style: TextStyle(fontSize: 12)),
           const FittedBox(
             fit: BoxFit.contain,
             child: Padding(
