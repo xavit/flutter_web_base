@@ -6,9 +6,21 @@ class Flurorouter {
   static final FluroRouter router = FluroRouter();
 
   static void configureRoutes() {
-    router.define("/", handler: _counterHandler);
-    router.define("/stateful", handler: _counterHandler);
-    router.define("/provider", handler: _counterProviderHandler);
+    router.define(
+      "/",
+      handler: _counterHandler,
+      transitionType: TransitionType.fadeIn,
+    );
+    router.define(
+      "/stateful",
+      handler: _counterHandler,
+      transitionType: TransitionType.fadeIn,
+    );
+    router.define(
+      "/provider",
+      handler: _counterProviderHandler,
+      transitionType: TransitionType.fadeIn,
+    );
   }
 
   // Handlers
