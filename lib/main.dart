@@ -16,16 +16,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Rutas App',
-        initialRoute: 'stateful',
-        theme: ThemeData.dark(),
-        onGenerateRoute: RouteGenerator.generateRoute,
-        navigatorKey: locator<NavigationService>().navigatorKey,
-        builder: (_, child) {
-          return MainLayoutPage(
-            child: child ?? const CircularProgressIndicator(),
-          );
-        });
+      debugShowCheckedModeBanner: false,
+      title: 'Rutas App',
+      initialRoute: 'stateful',
+      theme: ThemeData.dark(),
+      onGenerateRoute: RouteGenerator.generateRoute,
+      navigatorKey: locator<NavigationService>().navigatorKey,
+      builder: (_, child) {
+        return MainLayoutPage(
+          child: child ?? const CircularProgressIndicator(),
+        );
+      },
+    );
   }
 }
