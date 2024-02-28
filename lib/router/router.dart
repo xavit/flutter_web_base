@@ -23,6 +23,13 @@ class Flurorouter {
     },
   );
 
+  static final Handler _dashboardUserHandler = Handler(
+    handlerFunc: (contex, params) {
+      print(params);
+      return const View404();
+    },
+  );
+
   static final Handler _pageNotFound = Handler(
     handlerFunc: (_, __) => const View404(),
   );
@@ -48,6 +55,12 @@ class Flurorouter {
     router.define(
       "/provider",
       handler: _counterProviderHandler,
+      transitionType: TransitionType.cupertino,
+    );
+    //Ruta con varios parametros
+    router.define(
+      "/dashboard/:userid/:roleid",
+      handler: _dashboardUserHandler,
       transitionType: TransitionType.fadeIn,
     );
 
