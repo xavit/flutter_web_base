@@ -4,14 +4,15 @@ import 'package:flutter_web_base/ui/shared/custom_elevated_buttom.dart';
 import 'package:provider/provider.dart';
 
 class CounterProviderView extends StatelessWidget {
-  const CounterProviderView({super.key});
+  final String base;
+  const CounterProviderView({super.key, required this.base});
 
   @override
   Widget build(BuildContext context) {
     int counter = 15;
 
     return ChangeNotifierProvider(
-        create: (_) => CounterProvider(),
+        create: (_) => CounterProvider(base),
         child: const _CounterProviderPageBody());
   }
 }

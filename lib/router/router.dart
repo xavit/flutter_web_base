@@ -15,7 +15,12 @@ class Flurorouter {
   );
 
   static final Handler _counterProviderHandler = Handler(
-    handlerFunc: (contex, params) => const CounterProviderView(),
+    handlerFunc: (contex, params) {
+      print(params);
+      return CounterProviderView(
+        base: params['q']?[0] ?? '10',
+      );
+    },
   );
 
   static final Handler _pageNotFound = Handler(
